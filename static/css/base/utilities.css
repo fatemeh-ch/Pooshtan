@@ -1,0 +1,148 @@
+
+/*
+==========
+Display
+==========
+*/
+
+.d-flex {
+    display: flex;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-none {
+    display: none;
+}
+
+
+/*
+==========
+Flex Direction
+==========
+*/
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+
+/*
+==========
+Justify Content
+==========
+*/
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+
+/*
+==========
+Align Items
+==========
+*/
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+
+/*
+==========
+Text Alignment
+==========
+*/
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+
+/*
+==========
+Position
+==========
+*/
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+
+/*
+==========
+Width & Height
+==========
+*/
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+
+/*
+==========
+Overflow
+==========
+*/
+
+.overflow-hidden {
+    overflow: hidden;
+}
