@@ -5,44 +5,44 @@ Colors
 */
 
 :root {
-    /* Brand Colors */
-    --color-primary-charcoal-brown: #49413B;
-    --color-primary-hover-dark-brown: #65574C;
-    --color-secondary-soft-brown: #76685C;
-    --color-accent-caramel-brown: #A48B78;
+  /* Brand Colors */
+  --color-primary-charcoal-brown: #49413b;
+  --color-primary-hover-dark-brown: #65574c;
+  --color-secondary-soft-brown: #76685c;
+  --color-accent-caramel-brown: #a48b78;
 
-    /* Background Colors */
-    --color-background-warm-ivory: #F8F5EF;
-    --color-background-pearl-white: #FFFEFC;
-    --color-background-light-cream: #F0E9DF;
+  /* Background Colors */
+  --color-background-warm-ivory: #f8f5ef;
+  --color-background-pearl-white: #fffefc;
+  --color-background-light-cream: #f0e9df;
 
-    /* Neutral Colors */
-    --color-neutral-soft-beige: #E9E0D4;
-    --color-neutral-warm-taupe: #B8A493;
-    --color-neutral-stone-beige: #D5C5B5;
+  /* Neutral Colors */
+  --color-neutral-soft-beige: #e9e0d4;
+  --color-neutral-warm-taupe: #b8a493;
+  --color-neutral-stone-beige: #d5c5b5;
 
-    /* Text Colors */
-    --color-text-charcoal-brown: #49413B;
-    --color-text-soft-brown: #76685C;
-    --color-text-pearl-white: #FFFEFC;
+  /* Text Colors */
+  --color-text-charcoal-brown: #49413b;
+  --color-text-soft-brown: #76685c;
+  --color-text-pearl-white: #fffefc;
 
-    /* Button Colors */
-    --color-button-primary: #49413B;
-    --color-button-primary-text: #FFFEFC;
-    --color-button-secondary: #E9E0D4;
-    --color-button-secondary-text: #49413B;
+  /* Button Colors */
+  --color-button-primary: #49413b;
+  --color-button-primary-text: #fffefc;
+  --color-button-secondary: #e9e0d4;
+  --color-button-secondary-text: #49413b;
 
-    /* Status Colors */
-    --color-status-success: #52745A;
-    --color-status-success-bg: #EDF3EB;
+  /* Status Colors */
+  --color-status-success: #52745a;
+  --color-status-success-bg: #edf3eb;
 
-    --color-status-error: #A44740;
-    --color-status-error-bg: #F8ECE9;
+  --color-status-error: #a44740;
+  --color-status-error-bg: #f8ece9;
 
-    --color-status-warning: #94713B;
-    --color-status-warning-bg: #F6F0E3;
+  --color-status-warning: #94713b;
+  --color-status-warning-bg: #f6f0e3;
 
-    --color-status-info: #536E7B;
+  --color-status-info: #536e7b;
 }
 
 /*
@@ -52,14 +52,20 @@ Typography
 */
 
 :root {
-    --font-primary: "Vazirmatn", Tahoma, Arial, sans-serif;
+  --font-primary: "Vazirmatn", Tahoma, Arial, sans-serif;
 
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --font-size-x-small: 0.25rem;
+  --font-size-small: 0.5rem;
+  --font-size-half-medium: 0.75rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.5rem;
+  --font-size-x-large: 2rem;
 }
-
 
 /*
 ==========
@@ -68,15 +74,14 @@ Spacing
 */
 
 :root {
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-    --spacing-2xl: 3rem;
-    --spacing-3xl: 4rem;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
 }
-
 
 /*
 ==========
@@ -85,13 +90,12 @@ Border Radius
 */
 
 :root {
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
-    --radius-xl: 16px;
-    --radius-full: 9999px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
 }
-
 
 /*
 ==========
@@ -100,11 +104,10 @@ Shadows
 */
 
 :root {
-    --shadow-sm: 0 2px 6px rgba(73, 65, 59, 0.06);
-    --shadow-md: 0 4px 12px rgba(73, 65, 59, 0.08);
-    --shadow-lg: 0 8px 24px rgba(73, 65, 59, 0.10);
+  --shadow-sm: 0 2px 6px rgba(73, 65, 59, 0.06);
+  --shadow-md: 0 4px 12px rgba(73, 65, 59, 0.08);
+  --shadow-lg: 0 8px 24px rgba(73, 65, 59, 0.1);
 }
-
 
 /*
 ==========
@@ -113,11 +116,10 @@ Transitions
 */
 
 :root {
-    --transition-fast: 150ms ease;
-    --transition-normal: 250ms ease;
-    --transition-slow: 350ms ease;
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
 }
-
 
 /*
 ==========
@@ -126,6 +128,16 @@ Layout
 */
 
 :root {
-    --container-width: 1200px;
-    --container-padding: 24px;
+  --container-width: 1200px;
+  --container-padding: 24px;
+}
+
+/*
+==============
+Default Border
+==============
+*/
+
+:root {
+  --default-border: 1.8px solid rgba(73, 65, 59, 0.1);
 }

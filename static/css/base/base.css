@@ -5,10 +5,9 @@ HTML
 */
 
 html {
-    direction: rtl;
-    scroll-behavior: smooth;
+  direction: rtl;
+  scroll-behavior: smooth;
 }
-
 
 /*
 ==========
@@ -17,15 +16,14 @@ Body
 */
 
 body {
-    min-height: 100vh;
-    font-family: var(--font-primary);
-    font-size: 1rem;
-    font-weight: var(--font-weight-regular);
-    line-height: 1.8;
-    color: var(--color-text-charcoal-brown);
-    background-color: var(--color-background-warm-ivory);
+  min-height: 100vh;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.8;
+  color: var(--color-text-charcoal-brown);
+  background-color: var(--color-background-warm-ivory);
 }
-
 
 /*
 ==========
@@ -34,5 +32,5 @@ Links
 */
 
 a {
-    color: inherit;
+  color: inherit;
 }

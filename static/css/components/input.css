@@ -1,0 +1,17 @@
+.text-input {
+  outline: none;
+  border: 1px solid var(--color-neutral-soft-beige);
+  padding: 0.25rem 2rem;
+  width: 100%;
+  border-radius: var(--radius-xl);
+}
+
+.text-input:hover,
+.text-input:focus {
+  border: 1px solid var(--color-status-error);
+  transition: var(--transition-slow);
+}
+
+.text-input::placeholder {
+  font-size: var(--font-size-half-medium);
+}
