@@ -1,0 +1,79 @@
+{% load static %}
+
+<!-- Footer -->
+
+<footer class="footer d-flex justify-between">
+
+    <!-- Accessibility -->
+
+    <nav class="footer-item accessibility d-flex flex-column" aria-label="دسترسی سریع">
+        <h4>دسترسی سریع</h4>
+        <ul>
+            <li><a href="{% url 'website:index' %}">صفحه اصلی</a></li>
+            <li><a href="#">وبلاگ</a></li>
+            <li><a href="#">همه محصولات</a></li>
+            <li><a href="#">تماس با ما</a></li>
+        </ul>
+    </nav>
+
+    <!-- Buying hints -->
+
+    <nav class="footer-item buying-hint d-flex flex-column" aria-label="راهنمای خرید">
+        <h4>راهنمای خرید</h4>
+        <ul class="d-flex flex-column">
+            <li><a href="#">نحوه ثبت سفارش</a></li>
+            <li><a href="#">راهنمای انتخاب سایز</a></li>
+            <li><a href="https://tracking.post.ir/" target="_blank" rel="noopener noreferrer">رهگیری مرسوله</a></li>
+            <li><a href="#">سوالات متداول</a></li>
+        </ul>
+    </nav>
+
+    <!-- Social Media     -->
+
+    <nav class="footer-item d-flex flex-column">
+
+        <!-- Logo -->
+        <a href="{% url 'website:index' %}">
+            <img src="{% static 'images/logo.png' %}" alt="pooshtan-logo" class="footer-logo">
+        </a>
+
+        <!-- Social media icons -->
+        <div class="social-media-icons d-flex">
+
+            <div class="social-media-icon">
+                <a href="#" aria-label="صفحه پوش تن در تلگرام">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="social-media-icon">
+                <a href="#" aria-label="صفحه پوش تن در پینترست">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-pinterest">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M17 3.34a10 10 0 0 1 -8.512 18.023l2.364 -5.315a3.5 3.5 0 0 0 2.398 .952c2.708 0 4.75 -2.089 4.75 -5a6 6 0 1 0 -11.64 2.041a1 1 0 1 0 1.88 -.682a4 4 0 1 1 7.76 -1.36c0 1.818 -1.156 3.001 -2.75 3.001c-.609 0 -1.153 -.361 -1.478 -1.022l1.142 -2.572a1 1 0 0 0 -1.828 -.812l-4.392 9.882a10 10 0 0 1 -4.694 -8.476l.005 -.324a10 10 0 0 1 14.995 -8.336" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="social-media-icon">
+                <a href="#" aria-label="صفحه پوش تن در اینستاگرام"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" />
+                        <path d="M8.5 12a3.5 3.5 0 1 0 7 0a3.5 3.5 0 0 0 -7 0" />
+                        <path d="M17 7v.01" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+</footer>
