@@ -5,13 +5,106 @@
 {% block extra_css %}
 
 <link rel="stylesheet" href="{% static 'css/pages/index.css' %}">
+
 <link rel="stylesheet" href="{% static 'css/components/carousel.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/card.css' %}">
 
 {% endblock extra_css %}
 
 {% block content %}
 
 {% include 'includes/carousel.html' %}
+
+<!-- Category -->
+
+<section class="categories d-flex flex-column">
+
+    <!-- Category Title -->
+
+    <div class="main-title d-flex flex-center">
+        <span class="line"></span>
+        <h2>دسته بندی</h2>
+        <span class="line"></span>
+    </div>
+
+    <!-- Category Items -->
+
+    <div class="category-items d-flex">
+
+        <!-- Category Item -->
+
+        <a href="#" class="d-flex flex-column category-item category-card position-relative">
+            <img src="{% static 'images/categories/category-pants.png' %}" class="d-block" alt="category-pants">
+
+            <div class="category-badge text-center position-absolute">
+                <p>شلوار</p>
+            </div>
+        </a>
+
+        <!-- Category Item -->
+
+        <a href="#" class="d-flex flex-column category-item category-card position-relative">
+            <img src="{% static 'images/categories/category-dress.png' %}" class="d-block" alt="category-dress">
+
+            <div class="category-badge text-center position-absolute">
+                <p>پیراهن</p>
+            </div>
+        </a>
+
+        <!-- Category Item -->
+
+        <a href="#" class="d-flex flex-column category-item category-card position-relative">
+            <img src="{% static 'images/categories/category-manteau.png' %}" class="d-block" alt="category-manteau">
+
+            <div class="category-badge text-center position-absolute">
+                <p>مانتو و شومیز</p>
+            </div>
+        </a>
+
+        <!-- Category Item -->
+
+        <a href="#" class="d-flex flex-column category-item category-card position-relative">
+            <img src="{% static 'images/categories/category-casual.png' %}" class="d-block" alt="category-casual">
+
+            <div class="category-badge text-center position-absolute">
+                <p>ست راحتی</p>
+            </div>
+        </a>
+
+        <!-- Category Item -->
+
+        <a href="#" class="d-flex flex-column category-item category-card position-relative">
+            <img src="{% static 'images/categories/category-rain-coat.png' %}" class="d-block" alt="category-rain-coat">
+
+            <div class="category-badge text-center position-absolute">
+                <p>پالتو</p>
+            </div>
+        </a>
+
+        <!-- Category Item -->
+
+        <a href="#" class="d-flex flex-column category-item category-card position-relative">
+            <img src="{% static 'images/categories/category-suit.png' %}" class="d-block" alt="category-suit">
+
+            <div class="category-badge text-center position-absolute">
+                <p>کت شلوار</p>
+            </div>
+        </a>
+
+        <!-- Category Item -->
+
+        <a href="#" class="d-flex flex-column category-item category-card position-relative">
+            <img src="{% static 'images/categories/category-skirt.png' %}" class="d-block" alt="category-skirt">
+
+            <div class="category-badge text-center position-absolute">
+                <p>دامن</p>
+            </div>
+        </a>
+    </div>
+
+</section>
+
+<!-- End of Category -->
 
 {% endblock %}
 

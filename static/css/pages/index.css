@@ -1,0 +1,46 @@
+/* 
+==========================================
+Main title (For Category and New Products) 
+==========================================
+*/
+
+.main-title {
+  gap: 10px;
+  width: 100%;
+  max-width: 230px;
+
+  color: var(--color-text-charcoal-brown);
+  font-size: var(--font-size-large);
+
+  margin: 0 auto;
+}
+
+.main-title .line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-accent-caramel-brown);
+}
+
+.main-title h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-primary-hover-dark-brown);
+  white-space: nowrap;
+}
+
+/* Categories */
+
+.categories {
+  margin: 5rem 0;
+  gap: var(--spacing-2xl);
+}
+
+.category-items {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 15px;
+
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
