@@ -34,3 +34,7 @@ Links
 a {
   color: inherit;
 }
+
+main {
+  padding: var(--spacing-md);
+}

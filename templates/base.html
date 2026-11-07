@@ -30,6 +30,7 @@
 
     <!-- Components CSS -->
     <link rel="stylesheet" href="{% static 'css/components/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/input.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/footer.css' %}">
 
@@ -43,27 +44,9 @@
 
     {% include 'includes/header.html' %}
 
-    <!-- Navbar -->
-    <nav class="d-flex flex-center navbar" aria-label="منوی اصلی">
+    {% include 'includes/navbar.html' %}
 
-        <ul class="d-flex justify-between">
-
-            <a href="{% url 'website:index' %}">
-                <li>صفحه اصلی</li>
-            </a>
-            <a href="#">
-                <li>وبلاگ</li>
-            </a>
-            <a href="#">
-                <li>درباره ما</li>
-            </a>
-            <a href="#">
-                <li>تماس با ما</li>
-            </a>
-        </ul>
-    </nav>
-
-
+    
     <main>
         {% block content %}{% endblock content %}
     </main>

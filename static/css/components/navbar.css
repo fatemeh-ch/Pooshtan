@@ -1,0 +1,25 @@
+/* Navbar */
+
+.navbar {
+  margin-top: var(--spacing-md);
+
+  border-top: var(--default-border);
+
+  padding: var(--spacing-md);
+}
+
+.navbar ul li {
+  font-weight: var(--font-weight-medium);
+
+  border-bottom: 2px solid transparent;
+
+  margin: 0 var(--spacing-lg);
+}
+
+.navbar ul li:hover {
+  border-bottom: 2px solid var(--color-text-soft-brown);
+
+  transition: var(--transition-normal);
+
+  color: var(--color-status-error);
+}

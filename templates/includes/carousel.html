@@ -1,0 +1,37 @@
+{% load static %}
+
+<!-- Carousel -->
+
+<section class="hero-carousel position-relative">
+
+    <div class="carousel-slides position-relative">
+
+        <!-- Slide 1 -->
+        <div class="carousel-slide position-absolute active">
+            <img src="{% static 'images/slider/slider(1).png' %}" alt="slider-pic">
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide position-absolute">
+            <img src="{% static 'images/slider/slider(2).png' %}" alt="slider-pic">
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide position-absolute">
+            <img src="{% static 'images/slider/slider(3).png' %}" alt="slider-pic">
+        </div>
+
+    </div>
+
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators position-absolute d-flex">
+
+        <button class="active" data-slide="0" aria-label="اسلاید اول"></button>
+        <button data-slide="1" aria-label="اسلاید دوم"></button>
+        <button data-slide="2" aria-label="اسلاید سوم"></button>
+
+    </div>
+
+</section>
+
+<!-- End of Carousel -->
