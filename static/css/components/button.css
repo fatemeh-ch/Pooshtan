@@ -1,0 +1,40 @@
+/* 
+=============================
+See all products (index.html)
+=============================
+*/
+
+.see-all-products {
+  margin: 4rem auto;
+  background-color: var(--color-button-primary);
+  color: var(--color-button-primary-text);
+  width: fit-content;
+  padding: 0.5rem 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.see-all-products:hover,
+.see-post-detail:hover {
+  background-color: var(--color-accent-caramel-brown);
+  transition: var(--transition-slow);
+  transform: scale(1.08);
+}
+
+/* 
+====================
+See Post-Blog Detail
+====================
+*/
+
+.see-post-detail {
+  margin: 0 auto 1rem 1rem;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+
+  border-radius: var(--radius-lg);
+
+  font-size: var(--font-size-half-medium);
+
+  background-color: var(--color-button-primary);
+  color: var(--color-button-primary-text);
+}

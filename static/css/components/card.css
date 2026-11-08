@@ -14,6 +14,11 @@ Category Card
   overflow: hidden;
 }
 
+.category-card:hover img {
+  transform: scale(0.95);
+  transition: ease-in 0.3s;
+}
+
 .category-item {
   flex: 0 0 auto;
   width: 8rem;
@@ -45,4 +50,113 @@ Category Card
   color: var(--color-primary-charcoal-brown);
   font-weight: bold;
   font-size: var(--font-size-half-medium);
+}
+
+/*
+============
+Product Card
+============
+*/
+
+.product-card {
+  width: 20rem;
+
+  padding: var(--spacing-xs);
+
+  background-color: var(--color-background-pearl-white);
+
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-md);
+
+  overflow: hidden;
+}
+
+.new-products-items {
+  grid-template-columns: repeat(3, auto);
+  gap: 1rem 2rem;
+}
+
+.product-card img {
+  border-radius: var(--radius-md);
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+  transition: all ease-in 0.2s;
+}
+
+/* wish list / favorite */
+
+.product-card a {
+  right: 10px;
+  top: 10px;
+}
+
+.product-card a:hover {
+  color: var(--color-status-error);
+
+  transition: var(--transition-slow);
+}
+
+/* Product Title */
+
+.product-card .product-title {
+  margin: var(--spacing-sm);
+}
+
+.product-card .product-title a:first-child {
+  font-size: 0.9rem;
+}
+
+/* Product Price */
+
+.product-card p {
+  font-size: var(--font-size-half-medium);
+  color: var(--color-secondary-soft-brown);
+}
+
+/* 
+=========
+Blog Card
+=========
+*/
+
+.blog-card {
+  background-color: var(--color-background-pearl-white);
+
+  overflow: hidden;
+  padding: var(--spacing-xs);
+  margin: 2.5rem auto;
+
+  border-radius: var(--radius-md);
+}
+
+.blog-card img {
+  border-radius: var(--radius-md);
+}
+
+.blog-card .post-details {
+  margin: 1rem 2rem 0 2rem;
+  gap: var(--spacing-sm);
+}
+
+.blog-card:hover img {
+  transform: scale(1.1);
+  transition: all ease-in 0.2s;
+}
+
+.blog-card .post-details h5 {
+  font-size: 0.9rem;
+  color: var(--color-primary-charcoal-brown);
+  font-weight: bold;
+}
+
+.blog-card .post-details p {
+  color: var(--color-secondary-soft-brown);
+  font-size: 0.8rem;
+}
+
+.blog-card .post-details span {
+  color: var(--color-status-success);
+  font-size: 0.75rem;
 }

@@ -29,10 +29,14 @@ Main title (For Category and New Products)
   white-space: nowrap;
 }
 
-/* Categories */
+/* 
+===========
+Categories 
+===========
+*/
 
 .categories {
-  margin: 5rem 0;
+  margin: 5rem 2rem;
   gap: var(--spacing-2xl);
 }
 
@@ -43,4 +47,54 @@ Main title (For Category and New Products)
 
   scrollbar-width: thin;
   -webkit-overflow-scrolling: touch;
+}
+
+/*
+============
+New Products
+============
+*/
+
+.new-products {
+  margin: 2rem;
+}
+
+.new-products .main-title {
+  margin-bottom: 2rem;
+}
+
+.new-products .g-main-title {
+  grid-column: 1 / -1;
+  margin-bottom: 1rem;
+}
+
+/* 
+================
+Secondary Banner
+================
+ */
+
+.secondary-banner img {
+  border-radius: var(--radius-md);
+}
+
+/* 
+==============
+Blog New Posts
+==============
+*/
+
+.blog-new-posts {
+  background-color: var(--color-background-light-cream);
+  margin: 3rem 0;
+  padding: 0.5rem 2rem 0;
+  border-radius: var(--radius-lg);
+}
+
+.blog-new-posts span {
+  color: var(--color-accent-caramel-brown);
+}
+
+.blog-new-posts .blog-post-items {
+  gap: var(--font-size-x-large);
 }
