@@ -1,0 +1,49 @@
+/* 
+==============
+Primary Banner
+==============
+*/
+
+.primary-banner {
+  width: 100%;
+  height: auto;
+}
+
+/*
+=============
+Content Boxes
+=============
+*/
+
+.content-boxes {
+  margin: 3rem 2rem;
+  gap: 5rem;
+}
+
+/* Content Box */
+
+.content-boxes .content-box {
+  grid-template-columns: repeat(2, auto);
+  gap: 2rem 3rem;
+}
+
+/* Content Box Image*/
+
+.content-boxes .content-box img {
+  border-radius: var(--radius-lg);
+}
+
+/* Content Box Texts*/
+
+.content-boxes .content-box .descriptions {
+  gap: 2rem;
+}
+
+.content-boxes .content-box h2 {
+  font-weight: bold;
+}
+
+.content-boxes .content-box p {
+  text-align: justify;
+  font-weight: var(--font-weight-medium);
+}

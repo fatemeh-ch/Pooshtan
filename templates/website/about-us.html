@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta_description %} درباره ما پوش تن،صفحه درباره ما،پوش تن {% endblock meta_description %}
+
+{% block og_title %}پوش تن |درباره ما{% endblock og_title %}
+
+{% block title %} پوش تن | درباره ما {% endblock title %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/pages/about-us.css' %}">
+
+{% endblock extra_css %}
+
+{% block content %}
+
+<!-- Primary Banner -->
+
+<img src="{% static 'images/website/banners/about-us-primary-banner.png' %}" alt="primary-banner-about-us"
+    class="primary-banner">
+
+<!-- End of Primary Banner -->
+
+
+<!-- Content Boxes -->
+
+<section class="content-boxes d-flex flex-column">
+
+    <!-- Content Box -->
+
+    <div class="content-box d-grid">
+
+        <img src="{% static 'images/website/banners/about-us-content-1.png' %}" alt="about-banner-1">
+
+        <div class="descriptions d-flex flex-column">
+
+            <h2>آغاز یک مسیر زیبا</h2>
+            <p>
+
+                پوش تن با این شعار شروع شد که زیبایی، در سادگی و انتخاب آگاهانه است.
+                ما اینجا هستیم تا با ارائه، لباس‌های باکیفیت، طراحی‌های خاص و
+                استایل‌های متنوع، همراه همیشگی شما در لحظه‌های خاص و روزمره باشیم
+                هدف ما، فراتر از فروش لباس است؛ ما می‌خواهیم بخشی از حال خوب
+                شما باشیم در هر موقعیتی که هستید.
+            </p>
+        </div>
+    </div>
+
+    <!-- Content Box -->
+
+    <div class="content-box d-grid">
+
+        <div class="descriptions d-flex flex-column">
+
+            <h2>انتخابی با وسواس و دقت</h2>
+
+            <p>
+                در پوش تن، هر لباس با دقت و وسواس انتخاب می‌شود:
+                از کیفیت پارچه گرفته تا طراحی و دوخت، تا مطمئن باشیم آنچه به دست
+                شما می‌رسد، شایسته‌ی سلیقه و اعتماد شماست.
+                ما به جزئیات اهمیت می‌دهیم، چون معتقدیم زیبایی واقعی در همین
+                جزئیات کوچک نهفته است.
+
+            </p>
+        </div>
+
+        <img src="{% static 'images/website/banners/about-us-content-2.png' %}" alt="about-banner-1">
+
+    </div>
+
+    <!-- Content Box -->
+
+    <div class="content-box d-grid">
+
+        <img src="{% static 'images/website/banners/about-us-content-3.png' %}" alt="about-banner-1">
+
+        <div class="descriptions d-flex flex-column">
+
+            <h2>سبک زندگی، با پوش تن</h2>
+            <p>
+                ما در پوش تن، به دنبال ساختن یک تجربه‌ی متفاوت از خرید هستیم:
+                تجربه‌ای که در آن، نه فقط یک لباس، بلکه حس خوب انتخاب،
+                آرامش در خرید و اعتماد به کیفیت را تجربه کنید.
+                با ما همراه باشید تا در مسیر استایل شخصی‌تان،
+                همیشه یک قدم جلوتر باشید.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<!-- End of Content Boxes -->
+
+
+{% endblock content %}
