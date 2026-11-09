@@ -1,0 +1,134 @@
+/* 
+==========
+Main Title
+==========
+*/
+
+.main-title {
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+
+  color: var(--color-text-charcoal-brown);
+  font-size: var(--font-size-large);
+
+  margin: 3rem auto;
+}
+
+.main-title .line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-accent-caramel-brown);
+}
+
+.main-title h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-primary-hover-dark-brown);
+  white-space: nowrap;
+}
+
+/* 
+=============
+Contact Boxes 
+=============
+*/
+
+.contact-boxes {
+  margin: 3rem 2rem;
+  gap: var(--spacing-lg);
+}
+
+.contact-boxes .contact-box {
+  background-color: var(--color-background-light-cream);
+
+  padding: 0.9rem 1.5rem;
+  gap: var(--spacing-md);
+  min-width: 0;
+
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+
+  flex: 1 1 0;
+}
+
+/* Contact Icon */
+
+.contact-boxes .contact-box svg {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-boxes .contact-box p {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.contact-boxes .contact-box a {
+  color: var(--color-accent-caramel-brown);
+  font-size: 0.85rem;
+}
+
+.contact-boxes .contact-box a:hover {
+  color: var(--color-secondary-soft-brown);
+}
+
+/* 
+===========
+Suggestions
+===========
+*/
+
+.suggestions {
+  margin: 10rem 3rem 3rem;
+}
+
+/* Message Box */
+
+.suggestions .message-box {
+  background-color: var(--color-background-light-cream);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+}
+
+/* Titles */
+
+.suggestions .message-box .titles {
+  gap: var(--spacing-sm);
+}
+
+.suggestions .message-box .titles h2 {
+  color: var(--color-primary-charcoal-brown);
+  font-weight: var(--font-weight-bold);
+}
+
+.suggestions .message-box .titles p {
+  color: var(--color-secondary-soft-brown);
+  font-size: var(--font-size-half-medium);
+}
+
+/* Message Box Form */
+
+.message-box .contact-form {
+  margin-top: var(--spacing-lg);
+  gap: 1.2rem;
+}
+
+.message-box .contact-form .top input:first-child {
+  margin-left: var(--spacing-lg);
+}
+
+.message-box .contact-form button {
+  margin-top: var(--spacing-md);
+}
+
+/* Secondary Banner */
+
+.suggestions img {
+  width: 50%;
+  height: 25rem;
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}

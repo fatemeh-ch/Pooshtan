@@ -145,6 +145,11 @@ Blog Card
   transition: all ease-in 0.2s;
 }
 
+.blog-card:hover{
+  background-color: var(--color-background-warm-ivory);
+  transition: all ease-in 0.2s;
+}
+
 .blog-card .post-details h5 {
   font-size: 0.9rem;
   color: var(--color-primary-charcoal-brown);
@@ -159,4 +164,35 @@ Blog Card
 .blog-card .post-details span {
   color: var(--color-status-success);
   font-size: 0.75rem;
+}
+
+
+/* 
+==========
+Input Card
+==========
+*/
+
+.input-card{
+  width: 100%;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-md);
+
+  background-color: var(--color-background-warm-ivory);
+
+}
+
+.input-card:hover{
+  background-color: var(--color-background-pearl-white);
+  transition: var(--transition-slow);
+}
+
+.input-card:focus{
+  outline: none;
+  background-color: var(--color-background-pearl-white);
+}
+
+.input-card::placeholder{
+  font-size: var(--font-size-half-medium);
+  color: var(--color-secondary-soft-brown);
 }

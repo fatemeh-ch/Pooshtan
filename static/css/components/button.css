@@ -38,3 +38,33 @@ See Post-Blog Detail
   background-color: var(--color-button-primary);
   color: var(--color-button-primary-text);
 }
+
+
+/* 
+=================
+Send Contact Form
+=================
+*/
+
+.send-contact-message{
+  background-color: var(--color-secondary-soft-brown);
+  color: var(--color-background-pearl-white);
+
+  gap: 1rem;
+  font-size: var(--font-size-half-medium);
+
+  padding: 0.5rem 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.send-contact-message svg{
+  width: 20px;
+  height: 20px;
+}
+
+.send-contact-message:hover{
+  background-color: var(--color-status-warning);
+  /* color: var(--color-primary-charcoal-brown); */
+
+  transition: var(--transition-slow);
+}

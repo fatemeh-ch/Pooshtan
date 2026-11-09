@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta_description %} تماس با ما پوش تن،صفحه تماس با ما،پوش تن {% endblock meta_description %}
+
+{% block og_title %}پوش تن | تماس با ما{% endblock og_title %}
+
+{% block title %} پوش تن | تماس با ما {% endblock title %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/pages/contact-us.css' %}">
+
+{% endblock extra_css %}
+
+
+{% block content %}
+
+<!-- Messages and Errors -->
+
+<div class="toast-container">
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="toast-message toast-{{ message.tags }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% for field in form %}
+    {% for error in field.errors %}
+    <div class="toast-message toast-error">
+        {{ error }}
+    </div>
+    {% endfor %}
+    {% endfor %}
+
+    {% for error in form.non_field_errors %}
+    <div class="toast-message toast-error">
+        {{ error }}
+    </div>
+    {% endfor %}
+
+</div>
+
+<!-- End of Messages and Errors -->
+
+
+<!-- Primary Banner -->
+
+<img src="{% static 'images/website/banners/contact-us-banner.png' %}" alt="contact-us-banner">
+
+<!-- End of Primary Banner -->
+
+
+<!-- Main Title -->
+
+<div class="main-title d-flex flex-center">
+    <span class="line"></span>
+    <h1>راه های ارتباطی با ما</h1>
+    <span class="line"></span>
+</div>
+
+<!-- End of Main Title -->
+
+
+<!-- Contact Boxes -->
+
+<section class="contact-boxes d-flex justify-between">
+
+    <!-- Contact Box -->
+
+    <div class="contact-box d-flex flex-column flex-center">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-phone preview-icon">
+            <path
+                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+        </svg>
+
+        <p>شماره تماس</p>
+
+        <a href="tel:02145652020">02145652020</a>
+    </div>
+
+    <!-- Contact Box -->
+
+    <div class="contact-box d-flex flex-column flex-center">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-mail preview-icon">
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+        </svg>
+        <p>ایمیل ما</p>
+
+        <a href="mailto:example@example.com">example@example.com</a>
+    </div>
+
+    <!-- Contact Box -->
+
+    <div class="contact-box d-flex flex-column flex-center">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-headset preview-icon">
+            <path
+                d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z" />
+            <path d="M21 16v2a4 4 0 0 1-4 4h-5" />
+        </svg>
+        <p>پشتیبانی آنلاین</p>
+
+        <p style="font-weight: normal;color: #a48b78;">همه روزه ، از 9 صبح تا 18 عصر</p>
+    </div>
+
+</section>
+
+<!-- End of Contact Boxes -->
+
+
+<!-- Send Suggestion -->
+
+<div class="suggestions d-flex justify-between">
+
+    <!-- Message Box -->
+    <section class="message-box d-flex flex-column">
+
+        <div class="titles d-flex flex-column">
+            <h2>برای ما پیام ارسال کنید</h2>
+            <p>در صورت داشتن هرگونه سوال،نظر و یا انتقاد با ما در تماس باشید</p>
+        </div>
+
+        <!-- Send message Form -->
+        <form action="." method="post" class="d-flex flex-column contact-form" novalidate>
+
+            {% csrf_token %}
+
+            <div class="top d-flex justify-between">
+
+                {{ form.user_full_name }}
+                {{ form.subject }}
+            </div>
+
+            {{ form.email }}
+            {{ form.message }}
+            <button type="submit" class="d-flex flex-center send-contact-message">
+
+                ارسال پیام
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-send preview-icon">
+                    <path
+                        d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+                    <path d="m21.854 2.147-10.94 10.939" />
+                </svg>
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Picture -->
+
+    <img src="{% static 'images/website/banners/contact-us-secondary-banner.png' %}" alt="contact-us-banner">
+
+</div>
+
+<!-- End of Send Suggestion -->
+
+{% endblock content %}

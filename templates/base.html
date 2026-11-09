@@ -55,7 +55,11 @@
 
     {% include 'includes/footer.html' %}
 
-    {% block extra_js %}{% endblock extra_js %}
+    {% block extra_js %}
+
+        <script src="{% static 'js/toast.js' %}"></script>
+
+    {% endblock extra_js %}
 
 </body>
 
