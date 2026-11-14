@@ -145,7 +145,7 @@ Blog Card
   transition: all ease-in 0.2s;
 }
 
-.blog-card:hover{
+.blog-card:hover {
   background-color: var(--color-background-warm-ivory);
   transition: all ease-in 0.2s;
 }
@@ -166,33 +166,48 @@ Blog Card
   font-size: 0.75rem;
 }
 
-
 /* 
 ==========
 Input Card
 ==========
 */
 
-.input-card{
+.input-card {
   width: 100%;
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-md);
 
   background-color: var(--color-background-warm-ivory);
-
 }
 
-.input-card:hover{
+.input-card:hover {
   background-color: var(--color-background-pearl-white);
   transition: var(--transition-slow);
 }
 
-.input-card:focus{
+.input-card:focus {
   outline: none;
   background-color: var(--color-background-pearl-white);
 }
 
-.input-card::placeholder{
+.input-card::placeholder {
   font-size: var(--font-size-half-medium);
   color: var(--color-secondary-soft-brown);
+}
+
+/* 
+====================
+Authentication Card
+====================
+*/
+
+.auth_card {
+  margin: 3rem auto;
+  max-width: 28rem;
+  padding: 1rem 2rem;
+
+  background-color: var(--color-background-light-cream);
+
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
 }

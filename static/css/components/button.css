@@ -39,14 +39,13 @@ See Post-Blog Detail
   color: var(--color-button-primary-text);
 }
 
-
 /* 
 =================
-Send Contact Form
+send-button Contact Form
 =================
 */
 
-.send-contact-message{
+.send-button {
   background-color: var(--color-secondary-soft-brown);
   color: var(--color-background-pearl-white);
 
@@ -57,14 +56,31 @@ Send Contact Form
   border-radius: var(--radius-lg);
 }
 
-.send-contact-message svg{
+.send-button svg {
   width: 20px;
   height: 20px;
 }
 
-.send-contact-message:hover{
+.send-button:hover {
   background-color: var(--color-status-warning);
-  /* color: var(--color-primary-charcoal-brown); */
 
+  transition: var(--transition-slow);
+}
+
+/* Auth Switch */
+
+.auth-switch-button {
+  background-color: transparent;
+  border: 1px solid var(--color-neutral-warm-taupe);
+
+  width: 100%;
+  padding: var(--spacing-sm);
+
+  border-radius: var(--radius-lg);
+}
+
+.auth-switch-button:hover {
+  background-color: var(--color-background-pearl-white);
+  color: var(--color-button-primary);
   transition: var(--transition-slow);
 }

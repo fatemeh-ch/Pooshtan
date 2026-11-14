@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta_description %} ورود به پوش تن ، صفحه ورود ، پوش تن{% endblock meta_description %}
+
+{% block title %}پوش تن | ورود{% endblock title %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/pages/auth.css' %}">
+
+{% endblock extra_css %}
+
+
+{% block content %}
+
+<!-- Authentication Box -->
+
+<div class="auth_card d-flex flex-column flex-center">
+
+    <!-- Logo -->
+    <img src="{% static 'images/logo.png' %}" alt="pooshtan-logo">
+
+    <!-- Titles -->
+    <section class="titles d-flex flex-column flex-center">
+        <h1>ورود به حساب کاربری</h1>
+        <p>لطفا ایمیل و رمز عبور خود را وارد نمایید</p>
+    </section>
+
+    <!-- Form -->
+    <form action="." method="post" class="d-flex flex-column">
+
+        {% csrf_token %}
+
+        <!-- Input: Email -->
+        <div class="input-wrapper d-flex align-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-mail preview-icon input-icon">
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+            </svg>
+
+            <input type="email" name="email" class="text-input" placeholder="آدرس ایمیل" autocomplete="username" required>
+        </div>
+
+        <!-- Input: Password -->
+        <div class="input-wrapper d-flex align-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-lock-keyhole preview-icon input-icon">
+                <circle cx="12" cy="16" r="1" />
+                <rect x="3" y="10" width="18" height="12" rx="2" />
+                <path d="M7 10V7a5 5 0 0 1 10 0v3" />
+            </svg>
+            <input type="password" name="password" class="text-input" placeholder="رمز عبور"
+                autocomplete="current-password" required>
+        </div>
+
+        <button type="submit" class="send-button">
+            ورود به حساب
+        </button>
+    </form>
+
+    <!-- OR -->
+
+    <div class="or d-flex align-center">
+        <span>یا</span>
+    </div>
+
+
+    <!-- Auth Switch -->
+    <button class="d-flex auth-switch-button justify-center">
+        <a href="{% url 'accounts:register' %}">ثبت نام در پوش تن</a>
+    </button>
+
+</div>
+
+<!-- End of Authentication Box -->
+
+{% endblock content %}

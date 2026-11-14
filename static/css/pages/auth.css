@@ -1,0 +1,140 @@
+/* Navbar */
+
+.navbar {
+  display: none;
+}
+
+main {
+  margin-top: var(--spacing-lg);
+  border-top: var(--default-border);
+}
+
+/* 
+====================
+Authentication Card
+====================
+*/
+
+.auth_card {
+  margin-top: 3rem;
+  gap: var(--spacing-md);
+}
+
+/* Logo */
+
+.auth_card img {
+  width: 10rem;
+}
+
+/* Titles */
+
+.auth_card .titles {
+  margin-top: var(--spacing-md);
+  gap: 0.8rem;
+}
+
+.auth_card .titles h1 {
+  font-weight: var(--font-weight-bold);
+}
+
+.auth_card .titles p {
+  color: var(--color-text-soft-brown);
+  font-size: 0.8rem;
+}
+
+/* Form */
+
+.auth_card form {
+  width: 100%;
+  margin-top: 1rem;
+  gap: var(--spacing-md);
+}
+
+/* Form Inputs */
+.auth_card .input-wrapper {
+  background-color: var(--color-background-pearl-white);
+  border: 1px solid var(--color-neutral-soft-beige);
+  border-radius: var(--radius-lg);
+
+  padding: 0 var(--spacing-md);
+}
+
+.auth_card .input-wrapper:hover {
+  border: 1px solid var(--color-status-error);
+  transition: var(--transition-slow);
+}
+
+.auth_card .input-wrapper:focus-within {
+  border-color: var(--color-accent-caramel-brown);
+  box-shadow: 0 0 0 3px rgba(164, 139, 120, 0.15);
+}
+
+.auth_card .input-wrapper .text-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.4rem 1rem;
+  font-size: var(--font-size-medium);
+  color: var(--color-text-charcoal-brown);
+}
+
+.auth_card .input-wrapper .text-input::placeholder {
+  color: var(--color-text-soft-brown);
+}
+
+/*
+==============
+Autofill Input
+==============
+*/
+
+.input-wrapper input:-webkit-autofill,
+.input-wrapper input:-webkit-autofill:hover,
+.input-wrapper input:-webkit-autofill:focus,
+.input-wrapper input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #fffefc inset;
+  -webkit-text-fill-color: #49413b;
+  caret-color: #49413b;
+}
+
+/* Input Icon */
+
+.auth_card .input-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-neutral-warm-taupe);
+  flex-shrink: 0;
+}
+
+/* Form Submit Button */
+
+.auth_card form button {
+  background-color: var(--color-neutral-warm-taupe);
+}
+
+/* 
+===
+OR
+===
+*/
+
+.auth_card .or {
+  gap: var(--spacing-md);
+  width: 100%;
+  margin: var(--spacing-sm) 0;
+}
+
+.auth_card .or span {
+  color: var(--color-text-soft-brown);
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+}
+
+.auth_card .or::before,
+.auth_card .or::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-neutral-stone-beige);
+}
