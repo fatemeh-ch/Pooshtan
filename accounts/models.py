@@ -2,6 +2,7 @@ from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
 
 from django.db import models
+from django.conf import settings
 
 from .choices import UserType
 from .managers import CustomUserManager
@@ -50,3 +51,28 @@ class User(AbstractUser):
 
         full_name = f'{self.first_name} {self.last_name}'.strip()
         return f'{self.email} - {full_name}'
+
+
+
+
+class Profile(models.Model):
+    """
+    Stores additional information associated with a Pooshtan user.
+    """
+
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='profile',
+    )
+    
+    avatar=models.ImageField(upload_to='profiles/',default='profiles/avatar.png')
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        """
+        Returns the email address of the profile's associated user.
+        """
+        return f'{self.user.email} Profile'

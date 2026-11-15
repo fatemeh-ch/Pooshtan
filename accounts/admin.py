@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from accounts.models import User
+from accounts.models import User,Profile
 
 
 @admin.register(User)
@@ -94,3 +94,21 @@ class CustomUserAdmin(UserAdmin):
     )
 
     filter_horizontal = ('groups', 'user_permissions')
+
+
+@admin.register(Profile)
+class CustomProfileAdmin(admin.ModelAdmin):
+    """
+    Configures the Django admin interface for managing user profiles.
+    """
+
+    list_display = ('user', 'created_at', 'updated_at')
+
+    fields = ('user', 'avatar')
+
+    readonly_fields = ('created_at', 'updated_at')
+
+    ordering = ('-created_at',)
+
+    search_fields = ('user__email',)
+    
