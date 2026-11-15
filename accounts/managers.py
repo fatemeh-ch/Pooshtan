@@ -2,9 +2,10 @@
 from django.contrib.auth.models import BaseUserManager
 from django.utils.translation import gettext_lazy as _
 
+from accounts.choices import UserType
+
 
 class CustomUserManager(BaseUserManager):
-
     """
     Custom manager for the Pooshtan User model.
 
@@ -47,12 +48,11 @@ class CustomUserManager(BaseUserManager):
         return user
 
     def create_superuser(self, email, password=None, **extra_fields):
-
         """
         Create and return a superuser.
 
-        Set the required administrative permissions and ensure
-        that the account has the ADMIN user type.
+        Set the required administrative permissions and assign
+        the SUPERUSER account type.
 
         Args:
             email: The superuser's unique email address.
@@ -70,6 +70,7 @@ class CustomUserManager(BaseUserManager):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_active', True)
         extra_fields.setdefault('is_superuser', True)
+        extra_fields.setdefault('user_type', UserType.SUPERUSER)
 
         if extra_fields.get('is_staff') is not True:
             raise ValueError(_('Superuser must have is_staff=True.'))
@@ -80,6 +81,8 @@ class CustomUserManager(BaseUserManager):
         if extra_fields.get('is_active') is not True:
             raise ValueError(_('Superuser must have is_active=True.'))
 
+        if extra_fields.get('user_type') != UserType.SUPERUSER:
+            raise ValueError(_('Superuser must have SUPERUSER account type.'))
 
         return self.create_user(
             email=email,
