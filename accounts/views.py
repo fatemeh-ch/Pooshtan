@@ -15,3 +15,15 @@ class LoginView(auth_views.LoginView):
     
 class RegisterView(TemplateView):
     template_name = 'accounts/register.html'
+
+
+class LogoutView(auth_views.LogoutView):
+
+    """
+    Handles user logout for the Pooshtan website.
+
+    Uses Django's built-in LogoutView to log out the user
+    and redirect them to the homepage | index.
+    """
+
+    pass

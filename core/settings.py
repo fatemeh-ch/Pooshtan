@@ -148,3 +148,7 @@ AUTH_USER_MODEL = 'accounts.User'
 # Login Redirect URL
 
 LOGIN_REDIRECT_URL = 'website:index'
+
+# Logout Redirect URL
+
+LOGOUT_REDIRECT_URL = 'website:index'
