@@ -31,15 +31,48 @@
             </svg>
         </a>
 
+
         <!-- Account -->
-        <a href="{% url 'accounts:login' %}">
+
+        {% if user.is_authenticated %}
+
+        <div class="account_menu position-relative">
+
+            <a href="{% url 'accounts:dashboard' %}" class="account_icon" aria-label="حساب کاربری">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+            </a>
+
+            <div class="account_dropdown position-absolute d-flex flex-column">
+
+                <a href="{% url 'accounts:dashboard' %}" class="d-block text-right">
+                    پروفایل
+                </a>
+
+                <form action="{% url 'accounts:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="d-block text-right">خروج</button>
+                </form>
+
+            </div>
+
+        </div>
+
+        {% else %}
+
+        <a href="{% url 'accounts:login' %}" aria-label="ورود به حساب کاربری">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-user preview-icon">
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
                 <circle cx="12" cy="7" r="4" />
             </svg>
         </a>
+
+        {% endif %}
+
     </div>
 
     <!-- Searchbox -->

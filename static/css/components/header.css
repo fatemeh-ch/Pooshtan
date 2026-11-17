@@ -27,6 +27,61 @@
   right: -6px;
 }
 
+/*
+================
+Account Dropdown
+================
+*/
+
+.account_dropdown {
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+
+  min-width: 8rem;
+  padding: var(--spacing-sm);
+
+  gap: 0.1rem;
+
+  background-color: var(--color-background-light-cream);
+  border-radius:var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+
+  z-index: 10;
+}
+
+.account_menu:hover .account_dropdown,
+.account_menu:focus-within .account_dropdown {
+  opacity: 0.9;
+  visibility: visible;
+}
+
+.account_dropdown a,
+.account_dropdown button {
+  width: 100%;
+  padding: 0.2rem 0.3rem;
+
+  color: var(--color-text-charcoal-brown);
+  background: none;
+  border: none;
+  border-radius: var(--radius-lg);
+
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.account_dropdown a:hover,
+.account_dropdown button:hover {
+  background-color: var(--color-background-warm-ivory);
+}
+
 /* Searchbox */
 
 .header .searchbox {
