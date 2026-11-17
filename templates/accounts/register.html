@@ -15,6 +15,46 @@
 
 {% block content %}
 
+<!-- Form Error Toasts -->
+
+{% if form.errors %}
+
+<div class="toast-container" aria-live="polite">
+
+    {% for error in form.non_field_errors %}
+    <div class="toast-message toast-error" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+
+    {% for error in form.first_name.errors %}
+    <div class="toast-message toast-error" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+
+    {% for error in form.email.errors %}
+    <div class="toast-message toast-error" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+
+    {% for error in form.password1.errors %}
+    <div class="toast-message toast-error" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+
+    {% for error in form.password2.errors %}
+    <div class="toast-message toast-error" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+
+</div>
+{% endif %}
+
+
 <!-- Authentication Box -->
 
 <div class="auth_card d-flex flex-column flex-center">
@@ -29,7 +69,7 @@
     </section>
 
     <!-- Form -->
-    <form action="." method="post" class="d-flex flex-column">
+    <form action="{% url 'accounts:register' %}" method="post" class="d-flex flex-column">
 
         {% csrf_token %}
 
@@ -42,7 +82,7 @@
                 <path d="M20 21a8 8 0 0 0-16 0" />
             </svg>
 
-            <input type="text" name="first_name" class="text-input" placeholder="نام خود را وارد کنید" required autocomplete="given-name">
+            {{ form.first_name }}
         </div>
 
         <!-- Input: Email -->
@@ -54,8 +94,7 @@
                 <rect x="2" y="4" width="20" height="16" rx="2" />
             </svg>
 
-            <input type="email" name="email" class="text-input" placeholder="آدرس ایمیل" autocomplete="username"
-                required>
+            {{ form.email }}
         </div>
 
         <!-- Input: Password -->
@@ -67,8 +106,8 @@
                 <rect x="3" y="10" width="18" height="12" rx="2" />
                 <path d="M7 10V7a5 5 0 0 1 10 0v3" />
             </svg>
-            <input type="password" name="password" class="text-input" placeholder="رمز عبور"
-                autocomplete="current-password" required>
+
+            {{ form.password1 }}
         </div>
 
         <!-- Input: Confirm Password -->
@@ -80,8 +119,8 @@
                 <rect x="3" y="10" width="18" height="12" rx="2" />
                 <path d="M7 10V7a5 5 0 0 1 10 0v3" />
             </svg>
-            <input type="password" name="password_confirm" class="text-input" placeholder="تایید رمز عبور"
-                autocomplete="current-password" required>
+
+            {{ form.password2 }}
         </div>
 
         <button type="submit" class="send-button">
