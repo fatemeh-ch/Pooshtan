@@ -211,3 +211,48 @@ Authentication Card
   box-shadow: var(--shadow-md);
   border-radius: var(--radius-md);
 }
+
+/* 
+=============
+Comment Card
+=============
+*/
+
+.comment-card {
+  border: var(--default-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+}
+
+.comment-card svg {
+  background-color: var(--color-neutral-stone-beige);
+
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+  margin-left: var(--spacing-lg);
+  border-radius: 50%;
+
+  flex-shrink: 0;
+
+  stroke-width: 1.5;
+}
+
+.comment-card .comment-body .top{
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.comment-card .comment-body .top p:first-child{
+  font-size: var(--font-size-half-medium);
+  font-weight: bold;
+}
+
+.comment-card .comment-body .top p:nth-child(2){
+  font-size: var(--font-size-half-medium);
+  color: var(--color-status-success);
+}
+
+.comment-card .comment-body .body{
+  font-size: 0.8rem;
+}

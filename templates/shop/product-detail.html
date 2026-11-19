@@ -1,0 +1,571 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block og_title %} پوش تن|جزئیات محصول {% endblock og_title %}
+
+{% block title %} پوش تن | جزئیات محصول {% endblock title %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/pages/product-detail.css' %}">
+
+{% endblock extra_css %}
+
+
+{% block content %}
+
+
+<!-- Sub Menu -->
+
+<div class="sub-menu d-flex">
+
+    <!-- Index home page -->
+
+    <a href="{% url  'website:index' %}" class="d-flex flex-center">صفحه اصلی
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-chevron-left preview-icon">
+            <path d="m15 18-6-6 6-6" />
+        </svg>
+    </a>
+
+    <!-- Product Category -->
+
+    <a href="#" class="d-flex flex-center">دسته
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-chevron-left preview-icon">
+            <path d="m15 18-6-6 6-6" />
+        </svg>
+    </a>
+
+    <!-- Product Name -->
+
+    <a href="#" class="d-flex flex-center">نام محصول</a>
+
+</div>
+
+<!-- End of Sub Menu -->
+
+
+<!-- Product Detail and Photo -->
+
+<section class="product-details-section d-grid">
+
+    <!-- Product Details -->
+
+    <section class="product-detail d-flex flex-column">
+
+        <!-- Product Title -->
+
+        <h1 class="product-title">مانتو پاییزه شبنم</h1>
+
+        <!-- Product Brief Description -->
+
+        <p class="product-brief-description">
+            مانتویی شیک و سبک با طراحی خاص و پارچه با کیفیت
+            <br>
+            انتخابی ایده آل برای روز های خنک پاییز
+
+        </p>
+
+        <!-- Product Price ans Discount -->
+
+        <p class="product-price">
+            2,290,000 تومان
+        </p>
+
+        <!-- Product Colors -->
+
+        <p>رنگ ها</p>
+
+        <div class="product-colors d-flex justify-start">
+
+            <a href="#" class="product-color d-block" title="قهوه ای"></a>
+            <a href="#" class="product-color d-block" title="قهوه ای"></a>
+            <a href="#" class="product-color d-block" title="قهوه ای"></a>
+
+        </div>
+
+        <!-- Product Sizes -->
+
+        <p>سایز ها</p>
+
+        <div class="product-sizes d-flex justify-start">
+
+            <a href="#" class="product-size d-block">SM</a>
+            <a href="#" class="product-size d-block">XXL</a>
+
+        </div>
+
+        <!-- Product Stocks -->
+
+        <div class="product-stock d-flex align-center">
+            <p>تعداد</p>
+
+            <p class="d-flex flex-center">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-plus preview-icon">
+                        <path d="M5 12h14" />
+                        <path d="M12 5v14" />
+                    </svg>
+                </a>
+
+                1
+
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-minus preview-icon">
+                        <path d="M5 12h14" />
+                    </svg>
+                </a>
+            </p>
+        </div>
+
+        <!-- Add To Cart Button -->
+        <a href="#">
+
+            <button type="submit" class="d-flex flex-center add-to-cart">
+
+                افزودن به سبد خرید
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-shopping-cart preview-icon">
+                    <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+                    <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+                    <circle cx="18" cy="20" r="2" />
+                    <circle cx="8" cy="20" r="2" />
+                </svg>
+
+            </button>
+
+        </a>
+    </section>
+
+
+
+
+    <!-- Product Photos -->
+
+    <section class="product-pictures d-grid">
+
+        <!-- Primary Photo -->
+
+        <div class="wrapper position-relative">
+
+            <div class="primary-img-container">
+                <img src="{% static 'images/slider/slider(1).png' %}" alt="تصویر محصول" class="primary-img d-block"
+                    id="primary-product-image">
+            </div>
+
+            <!-- Previous Product Photo -->
+
+            <button type="button" class="pre-product-img-button position-absolute" aria-label="تصویر قبلی">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m15 18-6-6 6-6" />
+                </svg>
+            </button>
+
+            <!-- Next Product Photo -->
+
+            <button type="button" class="next-product-img-button position-absolute" aria-label="تصویر بعدی">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6" />
+                </svg>
+            </button>
+
+        </div>
+
+        <!-- Secondary Photos -->
+
+        <img src="{% static 'images/products/sweater.png' %}" alt="تصویر دوم محصول"
+            class="secondary-img-1 secondary-img">
+
+        <img src="{% static 'images/slider/slider(2).png' %}" alt="تصویر سوم محصول"
+            class="secondary-img-2 secondary-img">
+
+        <img src="{% static 'images/slider/slider(3).png' %}" alt="تصویر چهارم محصول"
+            class="secondary-img-3 secondary-img">
+
+    </section>
+
+
+</section>
+
+<!-- End of Product Detail and Photo -->
+
+
+<!-- Long Product Description -->
+
+<section class="long-product-desc d-flex flex-column">
+
+    <h2>توضیحات محصول</h2>
+
+    <div class="desc-content d-flex">
+        <p class="text-justify">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+            است، چاپگرها و متون بلکه
+            روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
+            هدف
+            بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+            متخصصان
+            را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو
+            در
+            زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت
+            تایپ
+            به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+            اساسا
+            مورد استفاده قرار گیرد.</p>
+
+        <img src="{% static 'images/products/sweater.png' %}" alt="">
+
+    </div>
+
+</section>
+
+<!-- End of Long Product Description -->
+
+
+<!-- Product Comments -->
+
+<section class="product-comments d-flex flex-column">
+
+    <!-- New Comment -->
+
+    <div class="new-comment d-flex justify-between">
+
+        <h3>نظرات کاربران</h3>
+
+        <button class="create-feedback">ثبت نظر</button>
+
+    </div>
+
+    <!-- Comment Lists -->
+
+    <section class="comments d-flex flex-column">
+
+        <article class="comment-card d-flex">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-user-round preview-icon">
+                <circle cx="12" cy="8" r="5" />
+                <path d="M20 21a8 8 0 0 0-16 0" />
+            </svg>
+
+            <div class="comment-body d-flex flex-column">
+
+                <div class="top d-flex align-center">
+                    <p>مینا احمدی</p>
+                    <p>28 - 08 - 1405</p>
+                </div>
+
+                <p class="body text-justify">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                </p>
+
+            </div>
+
+        </article>
+
+    </section>
+
+</section>
+
+<!-- End of Product Comments -->
+
+
+
+<!-- Similar Products -->
+
+<section class="similar-products d-flex flex-column">
+
+    <h3>محصولات مشابه</h3>
+
+    <!-- Similar Products Carousel -->
+
+    <div class="similar-products-carousel position-relative">
+
+        <!-- Previous Button -->
+
+        <button type="button" class="similar-previous-button position-absolute" aria-label="محصولات قبلی">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6" />
+            </svg>
+        </button>
+
+        <!-- Similar Products Wrapper -->
+
+        <div class="similar-products-wrapper">
+
+            <!-- Similar Products List -->
+
+            <div class="similar-products-list d-flex justify-start">
+
+                <!-- Product Item 1 -->
+
+                <div class="product-card d-flex flex-column position-relative">
+
+                    <img src="{% static 'images/products/sweater.png' %}" alt="بافت یقه گرد سفید">
+
+                    <a href="#" class="position-absolute wishlist-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
+                    </a>
+
+                    <div class="product-title d-flex justify-between align-center">
+                        <a href="#">بافت یقه گرد سفید</a>
+
+                        <a href="#" class="add-to-cart-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+                                <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+                                <circle cx="18" cy="20" r="2" />
+                                <circle cx="8" cy="20" r="2" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <p class="d-flex flex-center">850,000 تومان</p>
+
+                </div>
+
+                <!-- Product Item 2 -->
+
+                <div class="product-card d-flex flex-column position-relative">
+
+                    <img src="{% static 'images/products/sweater.png' %}" alt="بافت یقه گرد سفید">
+
+                    <a href="#" class="position-absolute wishlist-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
+                    </a>
+
+                    <div class="product-title d-flex justify-between align-center">
+                        <a href="#">بافت یقه گرد سفید</a>
+
+                        <a href="#" class="add-to-cart-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+                                <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+                                <circle cx="18" cy="20" r="2" />
+                                <circle cx="8" cy="20" r="2" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <p class="d-flex flex-center">850,000 تومان</p>
+
+                </div>
+
+                <!-- Product Item 3 -->
+
+                <div class="product-card d-flex flex-column position-relative">
+
+                    <img src="{% static 'images/products/sweater.png' %}" alt="بافت یقه گرد سفید">
+
+                    <a href="#" class="position-absolute wishlist-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
+                    </a>
+
+                    <div class="product-title d-flex justify-between align-center">
+                        <a href="#">بافت یقه گرد سفید</a>
+
+                        <a href="#" class="add-to-cart-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+                                <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+                                <circle cx="18" cy="20" r="2" />
+                                <circle cx="8" cy="20" r="2" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <p class="d-flex flex-center">850,000 تومان</p>
+
+                </div>
+
+                <!-- Product Item 4 -->
+
+                <div class="product-card d-flex flex-column position-relative">
+
+                    <img src="{% static 'images/products/sweater.png' %}" alt="بافت یقه گرد سفید">
+
+                    <a href="#" class="position-absolute wishlist-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
+                    </a>
+
+                    <div class="product-title d-flex justify-between align-center">
+                        <a href="#">بافت یقه گرد سفید</a>
+
+                        <a href="#" class="add-to-cart-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+                                <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+                                <circle cx="18" cy="20" r="2" />
+                                <circle cx="8" cy="20" r="2" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <p class="d-flex flex-center">850,000 تومان</p>
+
+                </div>
+
+                <!-- Product Item 5 -->
+
+                <div class="product-card d-flex flex-column position-relative">
+
+                    <img src="{% static 'images/products/sweater.png' %}" alt="بافت یقه گرد سفید">
+
+                    <a href="#" class="position-absolute wishlist-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
+                    </a>
+
+                    <div class="product-title d-flex justify-between align-center">
+                        <a href="#">بافت یقه گرد سفید</a>
+
+                        <a href="#" class="add-to-cart-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+                                <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+                                <circle cx="18" cy="20" r="2" />
+                                <circle cx="8" cy="20" r="2" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <p class="d-flex flex-center">850,000 تومان</p>
+
+                </div>
+
+
+                <!-- Product Item 6 -->
+
+                <div class="product-card d-flex flex-column position-relative">
+
+                    <img src="{% static 'images/products/sweater.png' %}" alt="بافت یقه گرد سفید">
+
+                    <a href="#" class="position-absolute wishlist-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
+                    </a>
+
+                    <div class="product-title d-flex justify-between align-center">
+                        <a href="#">بافت یقه گرد سفید</a>
+
+                        <a href="#" class="add-to-cart-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+                                <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+                                <circle cx="18" cy="20" r="2" />
+                                <circle cx="8" cy="20" r="2" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <p class="d-flex flex-center">850,000 تومان</p>
+
+                </div>
+
+                <!-- Product Item 6 -->
+
+                <div class="product-card d-flex flex-column position-relative">
+
+                    <img src="{% static 'images/products/sweater.png' %}" alt="بافت یقه گرد سفید">
+
+                    <a href="#" class="position-absolute wishlist-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
+                    </a>
+
+                    <div class="product-title d-flex justify-between align-center">
+                        <a href="#">بافت یقه گرد سفید</a>
+
+                        <a href="#" class="add-to-cart-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+                                <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+                                <circle cx="18" cy="20" r="2" />
+                                <circle cx="8" cy="20" r="2" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <p class="d-flex flex-center">850,000 تومان</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Next Button -->
+
+        <button type="button" class="similar-next-button position-absolute" aria-label="محصولات بعدی">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6" />
+            </svg>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- End of Similar Products -->
+
+
+{% endblock content %}
+
+
+{% block extra_js %}
+
+<script src="{% static 'js/product-detail.js' %}" defer></script>
+
+{% endblock extra_js %}

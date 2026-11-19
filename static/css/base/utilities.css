@@ -100,6 +100,10 @@ Text Alignment
   text-align: left;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .flex-center {
   justify-content: center;
   align-items: center;

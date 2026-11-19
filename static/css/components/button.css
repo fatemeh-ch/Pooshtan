@@ -40,9 +40,9 @@ See Post-Blog Detail
 }
 
 /* 
-=================
+========================
 send-button Contact Form
-=================
+========================
 */
 
 .send-button {
@@ -67,7 +67,11 @@ send-button Contact Form
   transition: var(--transition-slow);
 }
 
-/* Auth Switch */
+/* 
+===========
+Auth Switch
+===========
+*/
 
 .auth-switch-button {
   background-color: transparent;
@@ -83,4 +87,95 @@ send-button Contact Form
   background-color: var(--color-background-pearl-white);
   color: var(--color-button-primary);
   transition: var(--transition-slow);
+}
+
+/* 
+===========
+Add To Cart
+===========
+*/
+
+.add-to-cart {
+  gap: var(--spacing-sm);
+  white-space: nowrap;
+
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+
+  background-color: var(--color-button-primary);
+  color: var(--color-button-primary-text);
+
+  border-radius: var(--radius-lg);
+}
+
+.add-to-cart:hover {
+  background-color: var(--color-button-secondary);
+  color: var(--color-button-secondary-text);
+
+  transition: var(--transition-slow);
+}
+
+/* 
+==============================
+Product change Picture Buttons
+==============================
+*/
+
+.pre-product-img-button,
+.next-product-img-button {
+  background-color: var(--color-background-pearl-white);
+  opacity: 0.7;
+  padding: 0.5rem;
+  border-radius: 50%;
+
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pre-product-img-button {
+  right: 90%;
+}
+
+.next-product-img-button {
+  left: 90%;
+}
+
+/* 
+===============
+Create feedback
+===============
+*/
+
+.create-feedback {
+  background-color: var(--color-button-primary);
+  color: var(--color-background-pearl-white);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.8rem;
+}
+
+.create-feedback:hover {
+  background-color: var(--color-neutral-stone-beige);
+  color: var(--color-text-charcoal-brown);
+  transition: var(--transition-slow);
+}
+
+/* 
+================
+Similar Products
+================
+*/
+
+.similar-previous-button,
+.similar-next-button {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.similar-previous-button {
+  left: 0;
+}
+
+.similar-next-button {
+  right: 0;
 }
