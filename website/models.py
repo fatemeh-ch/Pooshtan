@@ -12,15 +12,19 @@ class ContactModel(models.Model):
     and creation and update timestamps.
     """
 
-    subject = models.CharField(max_length=255)
-    user_full_name = models.CharField(max_length=255)
-    email = models.EmailField()
-    message = models.TextField()
+    subject = models.CharField(max_length=255,verbose_name='عنوان')
+    user_full_name = models.CharField(max_length=255,verbose_name='نام کاربر')
+    email = models.EmailField(verbose_name='ایمیل')
+    message = models.TextField(verbose_name='بدنه پیام')
 
-    is_reviewed = models.BooleanField(default=False)
+    is_reviewed = models.BooleanField(default=False,verbose_name='مشاهده شده')
 
-    created_date = models.DateTimeField(auto_now_add=True)
-    updated_date = models.DateTimeField(auto_now=True)
+    created_date = models.DateTimeField(auto_now_add=True,verbose_name='تاریخ ایجاد')
+    updated_date = models.DateTimeField(auto_now=True,verbose_name='تاریخ تغییر')
+
+    class Meta:
+        verbose_name='فرم تماس با ما'
+        verbose_name_plural='فرم های تماس با ما'
 
     def __str__(self):
         """
