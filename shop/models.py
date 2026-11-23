@@ -318,7 +318,7 @@ class ProductVariantModel(models.Model):
         verbose_name='سایز محصول'
     )
 
-    stock = models.PositiveIntegerField(default=0,verbose_name='کوجودی')
+    stock = models.PositiveIntegerField(default=0,verbose_name='موجودی')
 
     created_at = models.DateTimeField(auto_now_add=True,verbose_name='تاریخ ایجاد')
     updated_at = models.DateTimeField(auto_now=True,verbose_name='تاریخ تغییر')
