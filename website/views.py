@@ -3,12 +3,34 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView, CreateView
 
 from website.forms import ContactModelForm
+from shop.models import ProductCategoryModel, ProductModel
+from shop.choices import ProductStatusType
 
 
 # Create your views here.
 
+
 class IndexView(TemplateView):
+    """Display the website homepage with active categories and published products."""
+
     template_name = 'website/index.html'
+
+    def get_context_data(self, **kwargs):
+        """Add active categories and published products to the template context."""
+        context = super().get_context_data(**kwargs)
+
+        context['categories'] = ProductCategoryModel.objects.filter(
+            is_active=True
+        )
+
+        context['products'] = ProductModel.objects.filter(
+            status=ProductStatusType.PUBLISHED
+        ).prefetch_related(
+            'product_colors__images'
+        )
+
+        return context
+
 
 
 class AboutUsView(TemplateView):

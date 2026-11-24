@@ -59,7 +59,7 @@ Product Card
 */
 
 .product-card {
-  width: 20rem;
+  width: 15rem;
 
   padding: var(--spacing-xs);
 
@@ -77,12 +77,18 @@ Product Card
 }
 
 .product-card img {
+  width: 100%;
+  height: 15rem;
+
+  object-fit: cover;
+  object-position: center;
+
   border-radius: var(--radius-md);
+  transition: transform ease-in 0.2s;
 }
 
 .product-card:hover img {
   transform: scale(1.1);
-  transition: all ease-in 0.2s;
 }
 
 /* wish list / favorite */
@@ -101,7 +107,7 @@ Product Card
 /* Product Title */
 
 .product-card .product-title {
-  margin: var(--spacing-sm);
+  margin: 0.8rem 0.1rem;
 }
 
 .product-card .product-title a:first-child {
@@ -111,7 +117,7 @@ Product Card
 /* Product Price */
 
 .product-card p {
-  font-size: var(--font-size-half-medium);
+  font-size: var(--font-size-medium);
   color: var(--color-secondary-soft-brown);
 }
 
@@ -238,21 +244,21 @@ Comment Card
   stroke-width: 1.5;
 }
 
-.comment-card .comment-body .top{
+.comment-card .comment-body .top {
   gap: var(--spacing-2xl);
   margin-bottom: var(--spacing-md);
 }
 
-.comment-card .comment-body .top p:first-child{
+.comment-card .comment-body .top p:first-child {
   font-size: var(--font-size-half-medium);
   font-weight: bold;
 }
 
-.comment-card .comment-body .top p:nth-child(2){
+.comment-card .comment-body .top p:nth-child(2) {
   font-size: var(--font-size-half-medium);
   color: var(--color-status-success);
 }
 
-.comment-card .comment-body .body{
+.comment-card .comment-body .body {
   font-size: 0.8rem;
 }

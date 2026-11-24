@@ -6,7 +6,7 @@ from django.core.validators import (
 )
 
 from django.db import models
-from shop.choices import ProductStatusType,ProductSizeType
+from shop.choices import ProductStatusType, ProductSizeType
 
 
 class ProductCategoryModel(models.Model):
@@ -16,7 +16,7 @@ class ProductCategoryModel(models.Model):
     Stores category information, its image, and activation status.
     """
 
-    title = models.CharField(max_length=100,verbose_name='عنوان')
+    title = models.CharField(max_length=100, verbose_name='عنوان')
 
     slug = models.SlugField(
         max_length=200,
@@ -31,10 +31,14 @@ class ProductCategoryModel(models.Model):
         verbose_name='عکس'
     )
 
-    is_active = models.BooleanField(default=False,verbose_name='فعال')
+    alt_text = models.CharField(max_length=100, verbose_name='متن راهنما')
 
-    created_at = models.DateTimeField(auto_now_add=True,verbose_name='تاریخ ایجاد')
-    updated_at = models.DateTimeField(auto_now=True,verbose_name='تاریخ تغییر')
+    is_active = models.BooleanField(default=False, verbose_name='فعال')
+
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name='تاریخ ایجاد')
+    updated_at = models.DateTimeField(
+        auto_now=True, verbose_name='تاریخ تغییر')
 
     class Meta:
         """
@@ -60,7 +64,7 @@ class ProductModel(models.Model):
     Stores product details, pricing, category, and publication status.
     """
 
-    title = models.CharField(max_length=200,verbose_name='عنوان')
+    title = models.CharField(max_length=200, verbose_name='عنوان')
 
     slug = models.SlugField(
         max_length=200,
@@ -69,7 +73,8 @@ class ProductModel(models.Model):
         verbose_name='اسلاگ'
     )
 
-    brief_description = models.CharField(max_length=250,verbose_name='توضیح کوتاه')
+    brief_description = models.CharField(
+        max_length=250, verbose_name='توضیح کوتاه')
     description = models.TextField(verbose_name='توضیحات کامل')
 
     category = models.ForeignKey(
@@ -102,8 +107,10 @@ class ProductModel(models.Model):
         verbose_name='وضعیت'
     )
 
-    created_at = models.DateTimeField(auto_now_add=True,verbose_name='تاریخ ایجاد')
-    updated_at = models.DateTimeField(auto_now=True,verbose_name='تاریخ تغییر')
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name='تاریخ ایجاد')
+    updated_at = models.DateTimeField(
+        auto_now=True, verbose_name='تاریخ تغییر')
 
     class Meta:
         """
@@ -127,7 +134,7 @@ class ColorModel(models.Model):
     Represents an available color for store products.
     """
 
-    title = models.CharField(max_length=50,verbose_name='عنوان')
+    title = models.CharField(max_length=50, verbose_name='عنوان')
 
     slug = models.SlugField(
         max_length=70,
@@ -147,8 +154,10 @@ class ColorModel(models.Model):
         verbose_name='کد هگزادسیمال'
     )
 
-    created_at = models.DateTimeField(auto_now_add=True,verbose_name='تاریخ ایجاد')
-    updated_at = models.DateTimeField(auto_now=True,verbose_name='تاریخ تغییر')
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name='تاریخ ایجاد')
+    updated_at = models.DateTimeField(
+        auto_now=True, verbose_name='تاریخ تغییر')
 
     class Meta:
         """
@@ -188,8 +197,10 @@ class ProductColorModel(models.Model):
         verbose_name='رنگ'
     )
 
-    created_at = models.DateTimeField(auto_now_add=True,verbose_name='تاریخ ایجاد')
-    updated_at = models.DateTimeField(auto_now=True,verbose_name='تاریخ تغییر')
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name='تاریخ ایجاد')
+    updated_at = models.DateTimeField(
+        auto_now=True, verbose_name='تاریخ تغییر')
 
     class Meta:
         """
@@ -226,7 +237,7 @@ class ProductImageModel(models.Model):
         verbose_name='عکس'
     )
 
-    alt_text = models.CharField(max_length=100,verbose_name='متن راهنما')
+    alt_text = models.CharField(max_length=100, verbose_name='متن راهنما')
 
     product_color = models.ForeignKey(
         ProductColorModel,
@@ -235,8 +246,10 @@ class ProductImageModel(models.Model):
         verbose_name='رنگ محصول'
     )
 
-    created_at = models.DateTimeField(auto_now_add=True,verbose_name='تاریخ ایجاد')
-    updated_at = models.DateTimeField(auto_now=True,verbose_name='تاریخ تغییر')
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name='تاریخ ایجاد')
+    updated_at = models.DateTimeField(
+        auto_now=True, verbose_name='تاریخ تغییر')
 
     class Meta:
         """
@@ -262,7 +275,7 @@ class ProductSizeModel(models.Model):
     Supports both numeric and letter-based size formats.
     """
 
-    title = models.CharField(max_length=10,verbose_name='عنوان')
+    title = models.CharField(max_length=10, verbose_name='عنوان')
 
     slug = models.SlugField(
         max_length=30,
@@ -277,8 +290,10 @@ class ProductSizeModel(models.Model):
         verbose_name='نوع سایز'
     )
 
-    created_at = models.DateTimeField(auto_now_add=True,verbose_name='تاریخ ایجاد')
-    updated_at = models.DateTimeField(auto_now=True,verbose_name='تاریخ تغییر')
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name='تاریخ ایجاد')
+    updated_at = models.DateTimeField(
+        auto_now=True, verbose_name='تاریخ تغییر')
 
     class Meta:
         """
@@ -318,10 +333,12 @@ class ProductVariantModel(models.Model):
         verbose_name='سایز محصول'
     )
 
-    stock = models.PositiveIntegerField(default=0,verbose_name='موجودی')
+    stock = models.PositiveIntegerField(default=0, verbose_name='موجودی')
 
-    created_at = models.DateTimeField(auto_now_add=True,verbose_name='تاریخ ایجاد')
-    updated_at = models.DateTimeField(auto_now=True,verbose_name='تاریخ تغییر')
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name='تاریخ ایجاد')
+    updated_at = models.DateTimeField(
+        auto_now=True, verbose_name='تاریخ تغییر')
 
     class Meta:
         """
@@ -372,10 +389,12 @@ class ProductComment(models.Model):
 
     body = models.TextField(verbose_name='متن کامنت')
 
-    is_approved = models.BooleanField(default=False,verbose_name='تایید شده')
+    is_approved = models.BooleanField(default=False, verbose_name='تایید شده')
 
-    created_at = models.DateTimeField(auto_now_add=True,verbose_name='تاریخ ایجاد')
-    updated_at = models.DateTimeField(auto_now=True,verbose_name='تاریخ تغییر')
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name='تاریخ ایجاد')
+    updated_at = models.DateTimeField(
+        auto_now=True, verbose_name='تاریخ تغییر')
 
     published_at = models.DateTimeField(
         null=True,

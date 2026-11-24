@@ -71,11 +71,13 @@ class CustomProductCategoryAdmin(admin.ModelAdmin):
         'title',
         'slug',
         'is_active',
+        'alt_text',
         'created_at',
     ]
 
     fields = [
         ('title', 'slug'),
+        'alt_text',
         'is_active',
         'image',
         'created_at',
