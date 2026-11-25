@@ -179,3 +179,31 @@ Similar Products
 .similar-next-button {
   right: 0;
 }
+
+/* 
+========================
+Back to Index (404.html)
+========================
+*/
+
+.back-to-main-btn {
+  background-color: var(--color-status-warning);
+  color: var(--color-button-primary-text);
+
+  padding: var(--spacing-sm);
+
+  font-size: var(--font-size-half-medium);
+  border-radius: var(--radius-md);
+}
+
+.back-to-main-btn svg {
+  width: 15px;
+  height: 15px;
+
+  margin-right: 0.5rem;
+}
+
+.back-to-main-btn:hover {
+  background-color: var(--color-status-error);
+  transition: var(--transition-slow);
+}

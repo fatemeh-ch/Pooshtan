@@ -1,0 +1,39 @@
+main {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 2rem 10rem;
+}
+
+/* 
+======
+Banner
+======
+*/
+
+.banner img {
+  height: 25rem;
+}
+
+/* 
+======
+Titles
+======
+*/
+
+main .titles {
+  margin: auto 3rem;
+}
+
+main .titles h1 {
+  color: var(--color-status-error);
+  font-size: 1.5rem;
+}
+
+main .titles p {
+  color: var(--color-text-soft-brown);
+}
+
+main .titles .back-to-main-btn {
+  margin-top: var(--spacing-lg);
+}
