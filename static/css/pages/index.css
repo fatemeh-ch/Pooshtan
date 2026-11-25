@@ -69,7 +69,12 @@ New Products
 
 .new-products .g-main-title {
   grid-column: 1 / -1;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.new-products-items {
+  grid-template-columns: repeat(3, auto);
+  gap: var(--spacing-xl);
 }
 
 /* 

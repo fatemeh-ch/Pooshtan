@@ -36,7 +36,7 @@ Product Details
 
 .product-details-section {
   padding: 1rem;
-  grid-template-columns: minmax(0, 0.54fr) minmax(0, 1fr);
+  grid-template-columns: repeat(2,1fr);
   column-gap: var(--spacing-lg);
 }
 
@@ -75,12 +75,10 @@ Product Detail
 /* Product Colors */
 
 .product-detail .product-colors {
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
 }
 
 .product-detail .product-colors .product-color {
-  background-color: brown;
-
   width: var(--spacing-xl);
   height: var(--spacing-xl);
   border-radius: 50%;
@@ -89,7 +87,7 @@ Product Detail
 }
 
 .product-detail .product-colors .product-color:hover {
-  border: 2px solid black;
+  border: 2px solid var(--color-secondary-soft-brown);
 }
 
 /* Product Sizes */
@@ -167,7 +165,7 @@ Product Pictures
 .primary-img {
   display: block;
   width: 100%;
-  height: 30rem;
+  height: 40rem;
   object-fit: cover;
   border-radius: var(--radius-lg);
 }

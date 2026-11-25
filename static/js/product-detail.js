@@ -1,3 +1,4 @@
+
 const primaryImage = document.querySelector('#primary-product-image');
 
 const secondaryImages = document.querySelectorAll('.secondary-img');
@@ -5,10 +6,13 @@ const secondaryImages = document.querySelectorAll('.secondary-img');
 const previousButton = document.querySelector('.pre-product-img-button');
 const nextButton = document.querySelector('.next-product-img-button');
 
-const images = [
-    primaryImage.src,
-    ...Array.from(secondaryImages, image => image.src)
-];
+const colorButtons = document.querySelectorAll('.product-color');
+
+const colorImagesElement = document.querySelector('#product-color-images');
+
+const productColorImages = JSON.parse(colorImagesElement.textContent);
+
+let images = [];
 
 let currentIndex = 0;
 let isAnimating = false;
@@ -30,8 +34,8 @@ function changeImage(index, direction) {
 
     const newImage = document.createElement('img');
 
-    newImage.src = images[currentIndex];
-    newImage.alt = primaryImage.alt;
+    newImage.src = images[currentIndex].url;
+    newImage.alt = images[currentIndex].alt;
     newImage.className = 'primary-img';
 
     newImage.style.position = 'absolute';
@@ -64,7 +68,8 @@ function changeImage(index, direction) {
 
     newImage.addEventListener('transitionend', function handler() {
 
-        primaryImage.src = images[currentIndex];
+        primaryImage.src = images[currentIndex].url;
+        primaryImage.alt = images[currentIndex].alt;
 
         primaryImage.style.position = '';
         primaryImage.style.left = '';
@@ -77,6 +82,58 @@ function changeImage(index, direction) {
     }, { once: true });
 
 }
+
+
+/*
+========
+Change Product Color
+========
+*/
+
+function changeProductColor(colorId) {
+
+    if (isAnimating) return;
+
+    const selectedColor = productColorImages.find(
+        color => color.id === Number(colorId)
+    );
+
+    if (!selectedColor || selectedColor.images.length !== 4) return;
+
+    images = selectedColor.images;
+
+    currentIndex = 0;
+
+    primaryImage.src = images[0].url;
+    primaryImage.alt = images[0].alt;
+
+    secondaryImages.forEach((image, index) => {
+
+        image.src = images[index + 1].url;
+        image.alt = images[index + 1].alt;
+
+    });
+
+}
+
+
+/*
+========
+Select Product Color
+========
+*/
+
+colorButtons.forEach(button => {
+
+    button.addEventListener('click', event => {
+
+        event.preventDefault();
+
+        changeProductColor(button.dataset.colorId);
+
+    });
+
+});
 
 
 /*
@@ -104,6 +161,18 @@ previousButton.addEventListener('click', () => {
 
 });
 
+
+/*
+========
+Set Initial Product Color
+========
+*/
+
+if (productColorImages.length > 0) {
+
+    changeProductColor(productColorImages[0].id);
+
+}
 
 
 

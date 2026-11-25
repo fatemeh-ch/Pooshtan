@@ -94,7 +94,7 @@
 
             <!-- Product Title & Add to cart -->
             <div class="product-title d-flex justify-between align-center">
-                <a href="#">{{ product.title }}</a>
+                <a href="{% url 'shop:product-detail' slug=product.slug %}">{{ product.title }}</a>
 
                 <a href="#" class="add-to-cart-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -113,9 +113,9 @@
 
         </div>
 
+        {% endfor %}
+        
     </div>
-
-    {% endfor %}
 
 
     <!-- See all Products -->

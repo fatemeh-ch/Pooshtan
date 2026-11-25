@@ -71,11 +71,6 @@ Product Card
   overflow: hidden;
 }
 
-.new-products-items {
-  grid-template-columns: repeat(3, auto);
-  gap: 1rem 2rem;
-}
-
 .product-card img {
   width: 100%;
   height: 15rem;
@@ -93,9 +88,13 @@ Product Card
 
 /* wish list / favorite */
 
-.product-card a {
+.product-card .wishlist-btn {
   right: 10px;
   top: 10px;
+  padding: 0.25rem;
+
+  background-color: var(--color-background-warm-ivory);
+  border-radius: 50%;
 }
 
 .product-card a:hover {
@@ -112,6 +111,17 @@ Product Card
 
 .product-card .product-title a:first-child {
   font-size: 0.9rem;
+}
+
+.product-card .product-title .add-to-cart-btn {
+  background-color: var(--color-neutral-soft-beige);
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+
+.product-card .product-title .add-to-cart-btn svg {
+  width: 25px;
+  height: 25px;
 }
 
 /* Product Price */

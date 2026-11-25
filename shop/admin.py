@@ -1,3 +1,4 @@
+
 from django.contrib import admin
 from django.utils import timezone
 
@@ -16,6 +17,10 @@ from shop.models import (
 @admin.register(ProductModel)
 class CustomProductAdmin(admin.ModelAdmin):
     """Configures the Django admin interface for products."""
+
+    prepopulated_fields = {
+        'slug': ('title',)
+    }
 
     list_display = [
         'title',
@@ -66,6 +71,10 @@ class CustomProductAdmin(admin.ModelAdmin):
 @admin.register(ProductCategoryModel)
 class CustomProductCategoryAdmin(admin.ModelAdmin):
     """Configures the Django admin interface for product categories."""
+
+    prepopulated_fields = {
+        'slug': ('title',)
+    }
 
     list_display = [
         'title',
@@ -191,6 +200,10 @@ class CustomProductImageAdmin(admin.ModelAdmin):
 class CustomColorAdmin(admin.ModelAdmin):
     """Configures the Django admin interface for available colors."""
 
+    prepopulated_fields = {
+        'slug': ('title',)
+    }
+
     list_display = [
         'title',
         'slug',
@@ -224,6 +237,10 @@ class CustomColorAdmin(admin.ModelAdmin):
 @admin.register(ProductSizeModel)
 class CustomProductSizeAdmin(admin.ModelAdmin):
     """Configures the Django admin interface for product sizes."""
+
+    prepopulated_fields = {
+        'slug': ('title',)
+    }
 
     list_display = [
         'title',
